@@ -14,7 +14,6 @@ class MainActivity : AppCompatActivity() {
         val rollButton: Button = findViewById(R.id.button)
         rollButton.setOnClickListener {
             rollDice()
-            val toast = Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -22,6 +21,13 @@ class MainActivity : AppCompatActivity() {
     private fun rollDice() {
         val dice = Dice(6)
         val diceRoll = dice.roll()
+        val luckyNumber = 6
+        if (diceRoll == luckyNumber){
+            val toast = Toast.makeText(this, "You got Lucky!", Toast.LENGTH_SHORT).show()
+        }
+        else{
+            val toast = Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT).show()
+        }
 
         //these lines update the textView with the result
         val resultTextView: TextView = findViewById(R.id.textView)

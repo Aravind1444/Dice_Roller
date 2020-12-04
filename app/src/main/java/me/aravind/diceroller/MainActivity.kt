@@ -1,14 +1,20 @@
 package me.aravind.diceroller
 
-import androidx.appcompat.app.AppCompatActivity
+import android.R.attr.name
+import android.R.id
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.analytics.FirebaseAnalytics
+import kotlinx.android.synthetic.main.activity_main.*
 
+
+private var mFirebaseAnalytics: FirebaseAnalytics? = null
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -16,6 +22,12 @@ class MainActivity : AppCompatActivity() {
         rollButton.setOnClickListener {
             rollDice()
         }
+
+        val bundle = Bundle()
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, button.toString())
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, button.toString())
+        bundle.putString(FirebaseAnalytics.Param.CONTENT_TYPE, "image")
+        mFirebaseAnalytics!!.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
     }
 
     //this is the function to roll the dice

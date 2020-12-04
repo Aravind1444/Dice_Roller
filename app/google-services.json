@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "290963036553",
+    "project_id": "pocket-dice-49e24",
+    "storage_bucket": "pocket-dice-49e24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290963036553:android:0897336fc8b78749bce958",
+        "android_client_info": {
+          "package_name": "me.aravind.diceroller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "290963036553-l5ids17ik8r3mkn608e12qq1r92qjbk2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.aravind.diceroller",
+            "certificate_hash": "cd589c0be79fbd86fd9d9b397adce4e6e5e30efb"
+          }
+        },
+        {
+          "client_id": "290963036553-659v0j9831kccqo6ja4epaee7vdh6ldk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-thJu-zb7bvEJRx1-dr3azR-VHW-7Hbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "290963036553-659v0j9831kccqo6ja4epaee7vdh6ldk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
